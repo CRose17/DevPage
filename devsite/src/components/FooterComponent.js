@@ -1,5 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer(props) {
   return (
@@ -10,21 +11,41 @@ function Footer(props) {
             <h5>Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Home</a>
+                <Link to="/home" className="text-primary">
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="#">Directory</a>
+                <Link to="/projects" className="text-primary">
+                  Projects
+                </Link>
               </li>
               <li>
-                <a href="#">About</a>
+                <Link to="/about" className="text-primary">
+                  About
+                </Link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <Link to="/contact" className="text-primary">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
           <div className="col-6 col-sm-3 text-center">
             <h5>Social</h5>
+            <a
+              className="btn btn-social-icon btn-github"
+              href="http://github.com/CRose17"
+            >
+              <FontAwesomeIcon icon={["fab", "github"]} />
+            </a>{" "}
+            <a
+              className="btn btn-social-icon btn-linkedin"
+              href="http://linkedin.com/in/cameron-rosenberger/"
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </a>{" "}
           </div>
           <div className="col-sm-4 text-center">
             <a role="button" className="btn btn-link" href="tel:+12063532553">

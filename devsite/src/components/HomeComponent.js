@@ -4,7 +4,7 @@ import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 /* import About from "./AboutComponent";
 import Contact from "./ContactComponent";
-import Directory from "./DirectoryComponent"; */
+import Projects from "./ProjectComponent"; */
 
 class Home extends Component {
   render() {

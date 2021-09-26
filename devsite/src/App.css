@@ -1,0 +1,15 @@
+.jumbotron {
+  background-image: url(./images/headerImage.jpg);
+  text-align: center;
+}
+.devLogo {
+  border-radius: 70%;
+}
+
+body {
+  background-color: aqua;
+}
+
+h1 {
+  text-align: center;
+}
