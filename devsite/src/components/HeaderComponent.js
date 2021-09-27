@@ -1,27 +1,41 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand, Jumbotron } from "reactstrap";
+import {
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
 import devLogo from "../images/newDevLogo.png";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isNavOpen: false
+    };
+    this.toggleNav = this.toggleNav.bind(this);
+  }
+
+  toggleNav() {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
-        <Jumbotron fluid>
+        <Navbar dark sticky="top" expand="lg">
           <div className="container">
-            <div className="row">
-              <div className="col">
-                <h1 className="text-light">Cameron Rosenberger</h1>
-                <h2 className="text-light">
-                  I'm an aspiring web and app developer
-                </h2>
-              </div>
-            </div>
-          </div>
-        </Jumbotron>
-
-        <Navbar dark sticky="top">
-          <div className="container">
-            <NavbarBrand className="mr-auto" href="/">
+            <NavbarBrand href="/" className="mr-auto">
               <img
                 className="devLogo"
                 src={devLogo}
@@ -30,6 +44,40 @@ class Header extends Component {
                 alt="Developer Logo"
               />
             </NavbarBrand>
+            <NavbarToggler onClick={this.toggleNav} />
+            <Collapse isOpen={this.state.isNavOpen} navbar>
+              <Nav navbar className="me-auto">
+                <NavItem>
+                  <NavLink className="nav-link" to="/home">
+                    <i className="fa fa-home fa-large" /> Home
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <UncontrolledDropdown nav inNavbar>
+                    <DropdownToggle nav caret>
+                      Projects
+                    </DropdownToggle>
+                    <DropdownMenu right>
+                      <DropdownItem>Project 1</DropdownItem>
+                      <DropdownItem>Project 2</DropdownItem>
+                      <DropdownItem>Project 3</DropdownItem>
+                      <DropdownItem divider />
+                      <DropdownItem>Reset</DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/about">
+                    <i className="fa fa-info fa-large" /> About
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/contact">
+                    <i className="fa fa-address-card fa-large" /> Contact
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
           </div>
         </Navbar>
       </React.Fragment>

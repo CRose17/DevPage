@@ -2,38 +2,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="row">
           <div className="col-4 col-sm-2 offset-1">
-            <h5>Links</h5>
+            <h5 className="text-light">Links</h5>
             <ul className="list-unstyled">
               <li>
-                <Link to="/home" className="text-primary">
-                  Home
-                </Link>
+                <Link to="/home">Home</Link>
               </li>
               <li>
-                <Link to="/projects" className="text-primary">
-                  Projects
-                </Link>
+                <Link to="/projects">Projects</Link>
               </li>
               <li>
-                <Link to="/about" className="text-primary">
-                  About
-                </Link>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary">
-                  Contact
-                </Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
           <div className="col-6 col-sm-3 text-center">
-            <h5>Social</h5>
+            <h5 className="text-light">Social</h5>
             <a
               className="btn btn-social-icon btn-github"
               href="http://github.com/CRose17"
