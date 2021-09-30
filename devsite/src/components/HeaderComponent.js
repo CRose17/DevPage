@@ -11,7 +11,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import devLogo from "../images/newDevLogo.png";
 
 class Header extends Component {
@@ -58,9 +58,15 @@ class Header extends Component {
                       Projects
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Project 1</DropdownItem>
-                      <DropdownItem>Project 2</DropdownItem>
-                      <DropdownItem>Project 3</DropdownItem>
+                      <DropdownItem tag={Link} to="/projects">
+                        Video Game
+                      </DropdownItem>
+                      <DropdownItem tag={Link} to="/projects">
+                        React Website
+                      </DropdownItem>
+                      <DropdownItem tag={Link} to="/projects">
+                        React Native App
+                      </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem>Reset</DropdownItem>
                     </DropdownMenu>
