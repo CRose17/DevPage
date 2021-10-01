@@ -5,13 +5,9 @@ import {
   NavbarBrand,
   NavbarToggler,
   Collapse,
-  NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavItem
 } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import devLogo from "../images/newDevLogo.png";
 
 class Header extends Component {
@@ -33,7 +29,7 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar dark sticky="top" expand="lg">
+        <Navbar dark sticky="top" expand="ex-lg">
           <div className="container">
             <NavbarBrand href="/" className="mr-auto">
               <img
@@ -53,24 +49,9 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Projects
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem tag={Link} to="/projects">
-                        Video Game
-                      </DropdownItem>
-                      <DropdownItem tag={Link} to="/projects">
-                        React Website
-                      </DropdownItem>
-                      <DropdownItem tag={Link} to="/projects">
-                        React Native App
-                      </DropdownItem>
-                      <DropdownItem divider />
-                      <DropdownItem>Reset</DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                  <NavLink className="nav-link" to="/projects">
+                    <i className="fa fa-list fa-large" /> Projects
+                  </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/about">

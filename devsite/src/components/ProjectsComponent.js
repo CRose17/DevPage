@@ -25,7 +25,9 @@ class Projects extends Component {
               alt="screenshot of game made with KaboomJS"
             />
             <CardBody>
-              <CardTitle className="card-title">Along Came A Spider</CardTitle>
+              <CardTitle className="card-title" id="Game_Project">
+                Along Came A Spider
+              </CardTitle>
               <CardSubtitle className="card-subtitle">
                 Video Game Built With KaboomJS
               </CardSubtitle>
@@ -45,7 +47,9 @@ class Projects extends Component {
               alt="screenshot of game made with KaboomJS"
             />
             <CardBody>
-              <CardTitle className="card-title">Versus Obstacle</CardTitle>
+              <CardTitle className="card-title" id="React_Website">
+                Versus Obstacle
+              </CardTitle>
               <CardSubtitle className="card-subtitle">
                 Website Built With React
               </CardSubtitle>
@@ -64,7 +68,9 @@ class Projects extends Component {
               alt="screenshot of game made with KaboomJS"
             />
             <CardBody>
-              <CardTitle className="card-title">First Foods</CardTitle>
+              <CardTitle className="card-title" id="React_Native_App">
+                First Foods
+              </CardTitle>
               <CardSubtitle className="card-subtitle">
                 App Built With React Native
               </CardSubtitle>
